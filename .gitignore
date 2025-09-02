@@ -1,0 +1,5 @@
+node_modules/
+.osp/
+.vscode/
+assets/css/main.css.map
+package-lock.json

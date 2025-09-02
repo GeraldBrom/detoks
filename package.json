@@ -4,9 +4,14 @@
   "description": "Лендинг для клиники плюс",
   "scripts": {
     "sass": "sass assets/scss/main.scss assets/css/main.css",
-    "sass:watch": "sass --watch assets/scss/main.scss assets/css/main.css"
+    "sass:watch": "sass --watch assets/scss/main.scss assets/css/main.css",
+    "dev": "concurrently \"npm run sass:watch\" \"browser-sync start --proxy=detoks.ld --files=assets/css/*.css,assets/js/*.js,components/*.php,index.php --no-open\"",
+    "serve": "browser-sync start --proxy=detoks.ld --files=assets/css/*.css,assets/js/*.js,components/*.php,index.php --no-open",
+    "build": "sass assets/scss/main.scss assets/css/main.css --style compressed"
   },
   "devDependencies": {
-    "sass": "^1.69.0"
+    "sass": "^1.69.0",
+    "browser-sync": "^2.29.3",
+    "concurrently": "^8.2.2"
   }
 }
