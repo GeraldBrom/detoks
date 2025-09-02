@@ -1,0 +1,6 @@
+<!-- About Section -->
+<section class="about">
+    <div class="container">
+        
+    </div>
+</section>

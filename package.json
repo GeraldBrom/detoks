@@ -1,0 +1,12 @@
+{
+  "name": "clinic-plus-landing",
+  "version": "1.0.0",
+  "description": "Лендинг для клиники плюс",
+  "scripts": {
+    "sass": "sass assets/scss/main.scss assets/css/main.css",
+    "sass:watch": "sass --watch assets/scss/main.scss assets/css/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}
