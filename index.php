@@ -9,6 +9,9 @@
     <title>Клиника плюс - Медицинские услуги высокого качества</title>
     <meta name="description" content="Клиника плюс - современная медицинская клиника с опытными врачами и новейшим оборудованием. Запись на прием онлайн.">
     <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body>
     <?php include 'components/header.php'; ?>
@@ -16,8 +19,9 @@
     <!-- Main Content -->
     <main class="main">
         <?php include 'components/hero.php'; ?>
-        <?php include 'components/about.php'; ?>
         <?php include 'components/services.php'; ?>
+        <?php include 'components/treatment.php'; ?>
+        <?php include 'components/about.php'; ?>
         <?php include 'components/doctors.php'; ?>
         <?php include 'components/advantages.php'; ?>
         <?php include 'components/testimonials.php'; ?>
@@ -27,6 +31,6 @@
 
     <?php include 'components/footer.php'; ?>
 
-    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

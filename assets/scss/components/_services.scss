@@ -1,1 +1,90 @@
-// Стили для секции услуг
+.services {
+    &__title {
+        font-size: 52px;
+        font-weight: 600;
+        line-height: 55px;
+        color: #383838;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    &__item {
+        background-color: #F1F8FD;
+        padding: 10px;
+        border-radius: 20px;
+
+        &__image {
+            width: 100%;
+            height: 235px;
+            object-fit: cover;
+        }
+
+        &__content {
+            padding: 25px 29px 40px 20px;
+        }
+
+        &__title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #383838;
+        }
+
+        &__description {
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(56, 56, 56, 0.75);
+        }
+
+        &__button {
+            width: 318px;
+            height: 55px;
+            position: relative;
+            border: 1px solid #0DA3FF;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            margin: 0 auto;
+
+            &__price {
+                color: #0DA3FF;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 25px;
+            }
+
+            .button {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 178px;
+                height: 55px;
+                background: #0DA3FF;
+                border: none;
+                border-radius: 32px;
+                color: white;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 25px;
+
+                &:hover {
+                    background: #0880cc;
+                }
+
+                &:focus {
+                    outline: 2px solid #0DA3FF;
+                    outline-offset: 2px;
+                }
+            }
+        }
+    }
+}

@@ -21,10 +21,12 @@
 @use 'components/cards';
 @use 'components/hero';
 @use 'components/services';
+@use 'components/treatment';
 @use 'components/contact';
 
 // Pages
 @use 'pages/home';
+@use 'pages/about';
 
 // Utilities
 @use 'utilities/helpers';

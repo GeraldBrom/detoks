@@ -1,6 +1,7 @@
 {
   "name": "clinic-plus-landing",
   "version": "1.0.0",
+  "type": "module",
   "description": "Лендинг для клиники плюс",
   "scripts": {
     "sass": "sass assets/scss/main.scss assets/css/main.css",

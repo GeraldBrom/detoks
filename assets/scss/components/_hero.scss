@@ -1,1 +1,91 @@
-// Стили для hero секции
+@use '../abstracts/mixins' as *;
+
+.hero {
+    position: relative;
+    min-height: 600px;
+    padding: 60px 0;
+    background: #F1F8FD;
+    margin-bottom: 140px;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35%;
+        height: 100%;
+        background: url('../images/hero/BackgroundHero.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 35%;
+        transform: translateX(55%);
+        width: 454px;
+        height: 560px;
+        background: url('../images/hero/DoctorHero.png');
+        background-size: contain;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        z-index: 3;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        &__title {
+            font-size: 62px;
+            line-height: 65px;
+            width: 50%;
+            font-weight: 600;
+            color: #383838;
+            margin-bottom: 40px;
+        }
+
+        &__features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 70px;
+        }
+
+        &__feature {
+            font-size: 18px;
+            font-weight: 400;
+            color: #383838;
+            position: relative;
+            padding-left: 40px;
+            display: flex;
+            align-items: flex-start;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 2px;
+                width: 25px;
+                height: 25px;
+                background: url('../images/hero/checkHero.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                flex-shrink: 0;
+            }
+
+            p {
+                margin: 0;
+                flex: 1;
+            }
+
+            &:not(:last-child) {
+                padding-bottom: 15px;
+            }
+        }
+    }
+}
+
