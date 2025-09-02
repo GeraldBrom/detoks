@@ -1,30 +1,30 @@
 // Главный SCSS файл
 
-// Abstracts
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+// Abstracts (загружаем как глобальные)
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
 
 // Base
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/base';
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/base';
 
 // Layout
-@import 'layout/header';
-@import 'layout/navigation';
-@import 'layout/footer';
-@import 'layout/grid';
+@use 'layout/header';
+@use 'layout/navigation';
+@use 'layout/footer';
+@use 'layout/grid';
 
 // Components
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/cards';
-@import 'components/hero';
-@import 'components/services';
-@import 'components/contact';
+@use 'components/buttons';
+@use 'components/forms';
+@use 'components/cards';
+@use 'components/hero';
+@use 'components/services';
+@use 'components/contact';
 
 // Pages
-@import 'pages/home';
+@use 'pages/home';
 
 // Utilities
-@import 'utilities/helpers';
+@use 'utilities/helpers';

@@ -4,7 +4,7 @@
         <nav class="navigation">
             <!-- Логотип -->
             <div class="logo">
-                
+
             </div>
             
             <!-- Меню навигации -->
