@@ -1,1 +1,6 @@
-// Миксины проекта
+// Mixin для центрирования элементов с flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
