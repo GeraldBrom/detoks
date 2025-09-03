@@ -40,11 +40,11 @@
                 <p class="advantages__form-text">Врачами создана эффективная технология мотивации пациентов согласиться на терапию.</p>
                 <p class="advantages__form-text">Метод показывает высокие результаты — 8 из 10 людей добровольно решаются начать лечение от зависимости.</p>
             </div>
-            <div class="advantages__form-input">
-                <input type="text" placeholder="Ваше имя">
-                <input type="tel" placeholder="Ваш телефон">
-                <button type="submit">Записаться</button>
-                <span class="advantages__form-text">Нажимая кнопку «Получить консультацию», вы соглашаетесь с политикой конфиденциальности</span>
+            <div class="advantages__form-fields">
+                <input type="text" placeholder="Ваше имя" class="advantages__form-input">
+                <input type="tel" placeholder="+7 999-999-99-99" class="advantages__form-input">
+                <button type="submit" class="advantages__form-button">Получить консультацию</button>
+                <p class="advantages__form-privacy">Нажимая кнопку «Получить консультацию», вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
             </div>
         </div>
     </div>
