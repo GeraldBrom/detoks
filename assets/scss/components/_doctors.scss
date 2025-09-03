@@ -1,7 +1,7 @@
 .doctors {
     padding: 140px 0;
     background-color: #fff;
-    overflow-x: visible;
+    overflow-x: hidden;
     
     &__title {
         font-size: 48px;
@@ -14,9 +14,10 @@
     
     &__list {
         display: grid;
-        grid-template-columns: 508px auto;
+        grid-template-columns: 508px 1fr;
         gap: 102px;
         align-items: center;
+        position: relative;
     }
     
     &__card {
@@ -86,9 +87,11 @@
     
     &__images {
         position: relative;
-        width: auto;
+        width: calc(100vw - 50%);
         height: 460px;
         border-radius: 15px;
+        overflow: hidden;
+        margin-right: calc(-50vw + 50%);
     }
     
     &__image {
