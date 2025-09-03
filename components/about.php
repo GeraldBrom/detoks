@@ -16,8 +16,6 @@ $documents = [
 ];
 ?>
 
-<!-- About Section -->
-
 <section class="about">
     <div class="container">
         <div class="about__content">
