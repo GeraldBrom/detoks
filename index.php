@@ -25,9 +25,8 @@
         <?php include 'components/doctors.php'; ?>
         <?php include 'components/advantages.php'; ?>
         <?php include 'components/faq.php'; ?>
-        <?php include 'components/testimonials.php'; ?>
+        <?php include 'components/questions-form.php'; ?>
         <?php include 'components/appointment-form.php'; ?>
-        <?php include 'components/contact.php'; ?>
     </main>
 
     <?php include 'components/footer.php'; ?>

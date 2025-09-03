@@ -81,10 +81,149 @@
         }
     }
 
-    // Стили кнопок навигации изображений теперь в _buttons.scss
 
     &__documents {
         padding: 40px 0;
+    }
+
+   
+    &__mobile-images {
+        display: none;
+    }
+
+    // Мобильная версия
+    @media (max-width: 768px) {
+        padding: 70px 0;
+        background: #F1F8FD;
+        min-height: 1225px;
+
+        .container {
+            padding: 0 10px; 
+            max-width: none;
+            width: 100%;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        &__mobile-images {
+            display: flex !important; 
+            width: 525px;
+            height: 200px;
+            margin: 0 auto 25px auto; 
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            touch-action: pan-x; 
+            cursor: grab;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            
+            &:active {
+                cursor: grabbing;
+            }
+        }
+
+        &__mobile-image {
+            width: 260px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            flex-shrink: 0;
+            transition: left 0.3s ease;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-touch-callout: none;
+            pointer-events: none; // отключаем стандартное поведение изображений
+            
+            &:nth-child(1) {
+                left: 0px;
+            }
+            
+            &:nth-child(2) {
+                left: 265px; // 5px gap
+            }
+            
+            &:nth-child(3) {
+                left: 530px; // следующие изображения
+            }
+            
+            &:nth-child(4) {
+                left: 795px;
+            }
+        }
+
+        &__image {
+            display: none; // скрываем десктопные изображения
+        }
+
+        &__image-wrapper {
+            display: none; // скрываем десктопные изображения
+        }
+
+        &__text {
+            max-width: none;
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 35px;
+            margin-bottom: 15px;
+        }
+
+        &__description {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-bottom: 25px;
+        }
+
+        &__features {
+            gap: 15px;
+            margin-bottom: 45px;
+        }
+
+        &__feature {
+            align-items: center;
+            gap: 15px;
+        }
+
+        &__feature-icon {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #D8E9F5;
+            border-radius: 50%;
+            background: transparent;
+            
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__feature-text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #383838;
+            flex: 1;
+        }
+
+        &__documents {
+            padding: 0;
+        }
     }
 }
 
@@ -149,4 +288,65 @@
         }
     }
 
+    // Мобильная версия документов
+    @media (max-width: 768px) {
+        &__title {
+            width: 300px;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 25px;
+            margin-bottom: 15px;
+            color: #383838;
+        }
+
+        &__items {
+            width: 410px;
+            height: 270px;
+            position: relative;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            
+            
+            &__item {
+                width: 200px;
+                height: 270px;
+                border-radius: 10px;
+                box-shadow: none;
+                position: absolute;
+                top: 0;
+                
+                &:nth-child(1) {
+                    left: 0px;
+                }
+                
+                &:nth-child(2) {
+                    left: 210px; // 10px gap
+                }
+                
+                &:nth-child(3),
+                &:nth-child(4) {
+                    display: none; // скрываем лишние документы
+                }
+                
+                &:hover {
+                    transform: none;
+                }
+                
+                &::after {
+                    display: none;
+                }
+                
+                img {
+                    width: 200px;
+                    height: 270px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }

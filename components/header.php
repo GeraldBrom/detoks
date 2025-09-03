@@ -40,6 +40,12 @@
             <button class="button button--primary" type="button" data-modal="callback">
                 Заказать звонок
             </button>
+
+            <button class="header__burger" type="button" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </div>
 </header>

@@ -20,11 +20,33 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  
+  @media screen and (max-width: 768px) {
+    padding: 0 10px;
+    max-width: none;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .main {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 

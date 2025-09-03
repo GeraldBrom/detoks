@@ -1,0 +1,142 @@
+.questions-form {
+    position: relative;
+    width: 100%;
+    height: 505px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 475px;
+        left: 0;
+        top: 30px;
+        background: linear-gradient(141deg, #0095F1 0%, #0DA3FF 100%);
+        z-index: 1;
+    }
+        
+    &::after {
+        content: '';
+        position: absolute;
+        width: 30%;
+        height: 475px;
+        right: 0;
+        top: 30px;
+        background: #0084D6;
+        z-index: 2;
+    }
+    
+    &__doctor {
+        position: absolute;
+        width: 437px;
+        height: 505px;
+        right: 30%;
+        transform: translateX(50%);
+        top: 0;
+        background: url('../images/questions-form/doctorQuestion.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 3;
+    }
+    
+    .container {
+        position: absolute;
+        z-index: 4;
+        left: min(360px, 20%);
+        top: 130px;
+        width: min(692px, 50%);
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    &__title {
+        color: white;
+        font-size: 52px;
+        font-family: Inter, sans-serif;
+        font-weight: 600;
+        line-height: 55px;
+        margin: 0;
+        word-wrap: break-word;
+    }
+
+    &__description {
+        color: white;
+        font-size: 20px;
+        font-family: Inter, sans-serif;
+        font-weight: 500;
+        line-height: 30px;
+        margin: 0;
+        word-wrap: break-word;
+    }
+
+    &__inputs {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__input {
+        width: 336px;
+        min-width: 200px;
+        height: 55px;
+        background: rgba(255, 255, 255, 0.30);
+        border-radius: 32px;
+        border: none;
+        padding-left: 20px;
+        color: white;
+        font-size: 16px;
+        font-family: Inter, sans-serif;
+        font-weight: 400;
+        line-height: 25px;
+        outline: none;
+        flex-shrink: 0;
+
+        &::placeholder {
+            color: white;
+            opacity: 1;
+        }
+    }
+
+    &__form-bottom {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    &__button {
+        width: 336px;
+        height: 55px;
+        background: white;
+        border-radius: 32px;
+        border: none;
+        color: #0DA3FF;
+        font-size: 16px;
+        font-family: Inter, sans-serif;
+        font-weight: 600;
+        line-height: 25px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        flex-shrink: 0;
+    }
+
+    &__privacy {
+        width: 329px;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 13px;
+        font-family: Inter, sans-serif;
+        font-weight: 500;
+        line-height: 20px;
+        margin: 0;
+        padding-top: 8px;
+
+        a {
+            color: rgba(255, 255, 255, 0.55);
+            text-decoration: underline;
+        }
+    }
+}

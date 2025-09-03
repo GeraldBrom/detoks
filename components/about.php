@@ -19,6 +19,14 @@ $documents = [
 <section class="about">
     <div class="container">
         <div class="about__content">
+            <!-- Мобильные изображения -->
+            <div class="about__mobile-images">
+                <img src="assets/images/about/about.png" alt="О клинике" class="about__mobile-image">
+                <img src="assets/images/about/about-2.png" alt="О клинике" class="about__mobile-image">
+                <img src="assets/images/about/about-3.png" alt="О клинике" class="about__mobile-image">
+                <img src="assets/images/about/about.png" alt="О клинике" class="about__mobile-image">
+            </div>
+            
             <div class="about__text">
                 <h2 class="about__title">О Клинике</h2>
                 <p class="about__description">Наши квалифицированные врачи и наркологи предлагают широкий спектр наркологических услуг, 

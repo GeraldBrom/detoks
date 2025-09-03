@@ -19,9 +19,18 @@
             </ul>
 
             <div class="hero__content__buttons">
-                <button class="button button--primary">Заказать звонок</button>
-                <button class="button button--secondary">Записаться на прием</button>
+                <button class="button button--primary">Получить помощь</button>
+                <button class="button button--secondary">Получить помощь</button>
             </div>
+        </div>
+        
+        <!-- Мобильные изображения -->
+        <div class="hero__images">
+            <div class="hero__background">
+                <img src="assets/images/hero/BackgroundHero.jpg" alt="">
+            </div>
+            <img src="assets/images/hero/DoctorHero.png" alt="Врач нарколог" class="hero__image">
         </div>
     </div>
 </section>
+
