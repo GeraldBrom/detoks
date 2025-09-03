@@ -35,6 +35,7 @@ $images = [
 <!-- Doctors Section -->
 <section class="doctors" data-doctors-slider>
     <div class="container">
+        <!-- ДЕСКТОПНАЯ ВЕРСИЯ (оригинал) -->
         <div class="doctors__list">
             <div class="doctors__card">
                 <div class="doctors__card__content">
@@ -74,13 +75,73 @@ $images = [
                     <img src="<?php echo $images[3]; ?>" alt="<?php echo $doctors[3]['name']; ?>">
                 </div>
             </div>
+
+            <!-- МОБИЛЬНАЯ ВЕРСИЯ (слайдер) -->
+            <div class="doctors__mobile-section">
+                <h2 class="doctors__mobile-title">Медицинский персонал</h2>
+                <div class="doctors__mobile-slider">
+                    <?php foreach ($doctors as $index => $doctor): ?>
+                    <div class="doctors__mobile-card">
+                    <div class="doctors__mobile-card__image-container">
+                        <img src="<?php echo $images[$index]; ?>" alt="<?php echo $doctor['name']; ?>" class="doctors__mobile-card__image">
+                    </div>
+                    <div class="doctors__mobile-card__info">
+                        <h3 class="doctors__mobile-card__name"><?php echo $doctor['name']; ?></h3>
+                        <div class="doctors__mobile-card__specialization">
+                            <span class="doctors__mobile-card__label">Специализация:</span>
+                            <span class="doctors__mobile-card__value"><?php echo $doctor['specialization']; ?></span>
+                        </div>
+                        <div class="doctors__mobile-card__experience">
+                            <span class="doctors__mobile-card__label">Опыт работы:</span>
+                            <span class="doctors__mobile-card__value"><?php echo $doctor['experience']; ?></span>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+                </div>
+            </div>
         </div>
     </div>
     
+    <!-- Данные для слайдера -->
     <script type="application/json" id="doctors-data">
         {
             "doctors": <?php echo json_encode($doctors); ?>,
             "images": <?php echo json_encode($images); ?>
         }
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileSlider = document.querySelector('.doctors__mobile-slider');
+            if (!mobileSlider) return;
+            
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            // Простой и плавный drag and drop для мобильного слайдера
+            mobileSlider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - mobileSlider.offsetLeft;
+                scrollLeft = mobileSlider.scrollLeft;
+            });
+            
+            mobileSlider.addEventListener('mouseleave', () => {
+                isDown = false;
+            });
+            
+            mobileSlider.addEventListener('mouseup', () => {
+                isDown = false;
+            });
+            
+            mobileSlider.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - mobileSlider.offsetLeft;
+                const walk = x - startX;
+                mobileSlider.scrollLeft = scrollLeft - walk;
+            });
+        });
     </script>
 </section>

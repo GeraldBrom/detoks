@@ -116,18 +116,26 @@
             width: 525px;
             height: 200px;
             margin: 0 auto 25px auto; 
-            position: relative;
             border-radius: 15px;
-            overflow: hidden;
+            overflow-x: auto;
+            overflow-y: hidden;
+            gap: 5px;
             touch-action: pan-x; 
             cursor: grab;
             user-select: none;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
+            scrollbar-width: none; // Firefox
+            -ms-overflow-style: none; // IE/Edge
+            scroll-behavior: smooth;
             
             &:active {
                 cursor: grabbing;
+            }
+            
+            &::-webkit-scrollbar {
+                display: none; // Chrome/Safari
             }
         }
 
@@ -136,31 +144,12 @@
             height: 200px;
             border-radius: 15px;
             object-fit: cover;
-            position: absolute;
-            top: 0;
             flex-shrink: 0;
-            transition: left 0.3s ease;
             user-select: none;
             -webkit-user-select: none;
             -webkit-user-drag: none;
             -webkit-touch-callout: none;
             pointer-events: none; // отключаем стандартное поведение изображений
-            
-            &:nth-child(1) {
-                left: 0px;
-            }
-            
-            &:nth-child(2) {
-                left: 265px; // 5px gap
-            }
-            
-            &:nth-child(3) {
-                left: 530px; // следующие изображения
-            }
-            
-            &:nth-child(4) {
-                left: 795px;
-            }
         }
 
         &__image {
@@ -242,6 +231,12 @@
         align-items: center;
         gap: 20px;
         flex-wrap: wrap;
+        cursor: grab;
+        user-select: none;
+        
+        &:active {
+            cursor: grabbing;
+        }
 
         &__item {
             position: relative;
@@ -284,6 +279,9 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                user-select: none;
+                -webkit-user-drag: none;
+                pointer-events: none;
             }
         }
     }
@@ -302,35 +300,32 @@
         &__items {
             width: 410px;
             height: 270px;
-            position: relative;
             border-radius: 10px;
             margin: 0 auto;
             display: flex;
-            gap: 0;
-            justify-content: flex-start;
-            flex-wrap: nowrap;
+            gap: 10px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            cursor: grab;
+            user-select: none;
+            scrollbar-width: none; // Firefox
+            -ms-overflow-style: none; // IE/Edge
+            scroll-behavior: smooth;
             
+            &:active {
+                cursor: grabbing;
+            }
+            
+            &::-webkit-scrollbar {
+                display: none; // Chrome/Safari
+            }
             
             &__item {
                 width: 200px;
                 height: 270px;
                 border-radius: 10px;
                 box-shadow: none;
-                position: absolute;
-                top: 0;
-                
-                &:nth-child(1) {
-                    left: 0px;
-                }
-                
-                &:nth-child(2) {
-                    left: 210px; // 10px gap
-                }
-                
-                &:nth-child(3),
-                &:nth-child(4) {
-                    display: none; // скрываем лишние документы
-                }
+                flex-shrink: 0;
                 
                 &:hover {
                     transform: none;
@@ -345,6 +340,9 @@
                     height: 270px;
                     border-radius: 10px;
                     object-fit: cover;
+                    user-select: none;
+                    -webkit-user-drag: none;
+                    pointer-events: none;
                 }
             }
         }

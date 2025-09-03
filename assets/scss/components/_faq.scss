@@ -370,4 +370,325 @@
             }
         }
     }
+    
+    // МОБИЛЬНАЯ АДАПТИВНАЯ ВЕРСИЯ
+    @media (max-width: 768px) {
+        padding: 80px 0;
+        
+        .container {
+            max-width: none;
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        &__title {
+            font-size: 30px;
+            line-height: 36px;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        &__content {
+            display: flex !important; // Переопределяем grid с десктопа
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 60px;
+            width: 100%;
+        }
+        
+        &__questions {
+            width: 100%;
+            gap: 15px;
+            display: flex !important; // Переопределяем с десктопа
+        }
+        
+        &__question-item {
+            width: 100%;
+            height: 64px !important; // Переопределяем десктопную высоту
+            box-shadow: 0px 0px 7.3px rgba(180, 204, 221, 0.50);
+            position: relative;
+            display: block !important; // Показываем элемент
+            
+            &[open] {
+                height: auto;
+                min-height: 320px;
+                
+                .faq__question-title::after {
+                    transform: rotate(90deg);
+                }
+                
+                .faq__question-title::before {
+                    opacity: 0;
+                }
+            }
+        }
+        
+        &__question-title {
+            padding: 0 !important; // Переопределяем десктопный padding
+            font-size: 16px !important; // Переопределяем десктопный размер
+            font-weight: 600;
+            line-height: 22px !important; // Переопределяем десктопный line-height
+            font-family: 'Inter', sans-serif;
+            position: absolute !important; // Переопределяем десктопное позиционирование
+            left: 20px;
+            top: 15px;
+            width: 224px;
+            height: 34px;
+            display: flex !important; // Переопределяем десктопное поведение
+            align-items: center;
+            justify-content: flex-start !important; // Переопределяем space-between
+            
+            // Убираем оригинальные иконки в мобильной версии
+            .faq__question-icon {
+                display: none !important;
+            }
+            
+            // Создаем кастомные иконки через псевдоэлементы
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                right: -40px;
+                top: 50%;
+                width: 16px;
+                height: 2px;
+                background: #0DA3FF;
+                transition: all 0.3s ease;
+            }
+            
+            // Горизонтальная линия
+            &::before {
+                transform: translateY(-50%);
+            }
+            
+            // Вертикальная линия (изначально повернута на 90 градусов)
+            &::after {
+                transform: translateY(-50%) rotate(90deg);
+            }
+        }
+        
+        &__question-content {
+            padding: 0 20px 20px 20px;
+        }
+        
+        &__question-answer {
+            font-size: 14px;
+            line-height: 20px;
+            color: rgba(56, 56, 56, 0.75);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        // Форма в мобильной версии  
+        &__form {
+            width: 100% ;
+            height: 384px;
+            padding: 20px ;
+            box-sizing: border-box;
+            background: #F1F8FD;
+            border-radius: 10px;
+            display: flex ;
+            flex-direction: column;    
+            align-items: stretch ;
+            gap: 15px;
+        }
+        
+        &__form-title {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22px;
+            color: #383838;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+        
+        &__form-input {
+            width: 100%;
+            height: 48px;
+            background: white;
+            border-radius: 32px;
+            border: none;
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #94A3B8;
+            font-family: 'Inter', sans-serif;
+            box-sizing: border-box;
+            
+            &::placeholder {
+                color: #94A3B8;
+            }
+        }
+        
+        &__form-textarea {
+            height: 112px;
+            border-radius: 24px;
+            resize: none;
+            padding-top: 18px;
+        }
+        
+        &__form-button {
+            width: 100%;
+            height: 48px;
+            background: #0DA3FF;
+            border-radius: 32px;
+            border: none;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            
+            &:hover {
+                background: #0091e6;
+            }
+        }
+        
+        &__form-privacy {
+            font-size: 12px;
+            line-height: 18px;
+            color: #94A3B8;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        &__form-link {
+            color: #94A3B8;
+            text-decoration: underline;
+        }
+        
+        // Отзывы в мобильной версии
+        &__feedback {
+            width: 100% !important; // Переопределяем десктопную ширину
+            height: auto !important; // Переопределяем десктопную высоту
+            margin-top: 60px !important; // Переопределяем десктопный отступ
+            position: relative;
+            display: block !important; // Показываем блок
+        }
+        
+        &__feedback-header {
+            margin-bottom: 30px;
+            display: flex !important; // Переопределяем при необходимости
+            flex-direction: column !important; // Переопределяем space-between
+            align-items: flex-start !important;
+            
+            .faq__feedback-title {
+                font-size: 30px !important; // Переопределяем десктопный размер
+                line-height: 36px !important; // Переопределяем десктопную высоту строки
+                font-family: 'Inter', sans-serif;
+                margin-bottom: 20px;
+            }
+            
+            .image-nav-controls {
+                justify-content: center !important; // Переопределяем десктопное позиционирование
+                gap: 15px;
+                display: flex !important;
+                
+                .image-nav-btn {
+                    width: 40px !important;
+                    height: 40px !important;
+                    background: #0DA3FF;
+                    border-radius: 50%;
+                    display: flex !important;
+                }
+            }
+        }
+        
+        &__feedback-container {
+            width: 100%;
+            display: block !important;
+        }
+        
+        &__feedback-slider {
+            width: 100%;
+            display: flex !important; // Переопределяем десктопные стили
+            flex-direction: row !important;
+        }
+        
+        &__feedback-card {
+            width: 100% !important; // Переопределяем десктопную ширину
+            height: 384px !important; // Переопределяем десктопную высоту
+            background: #F1F8FD;
+            border-radius: 16px !important; // Переопределяем десктопный радиус
+            padding: 20px !important; // Переопределяем десктопный padding
+            box-sizing: border-box;
+            display: flex !important; // Переопределяем десктопное позиционирование
+            flex-direction: column !important;
+            gap: 15px;
+            position: relative;
+        }
+        
+        &__feedback-card__name {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 32px;
+            color: #383838;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+        
+        &__feedback-card__text {
+            font-size: 14px;
+            line-height: 20px;
+            color: #383838;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            flex: 1;
+        }
+        
+        &__feedback-card__read-more {
+            background: none;
+            border: none;
+            color: #0DA3FF;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            padding: 0;
+            margin-top: auto;
+            text-align: left;
+        }
+        
+        &__feedback-card__date {
+            font-size: 14px;
+            color: #94A3B8;
+            font-family: 'Inter', sans-serif;
+            border-top: 1px solid #E2E8F0;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        padding: 60px 0;
+        
+        .container {
+            padding: 0 15px !important; // Переопределяем для еще более узких экранов
+        }
+        
+        &__title,
+        &__feedback-title {
+            font-size: 24px !important; // Переопределяем размеры для маленьких экранов
+            line-height: 32px !important;
+        }
+        
+        &__content {
+            display: flex !important; // Убеждаемся что flex остается
+        }
+        
+        &__questions {
+            display: flex !important; // Убеждаемся что flex остается
+        }
+        
+        &__question-item {
+            display: block !important; // Убеждаемся что показываются
+        }
+        
+        &__form {
+            display: flex !important; // Убеждаемся что форма остается flex
+        }
+        
+        &__feedback {
+            display: block !important; // Убеждаемся что отзывы показываются
+        }
+    }
 }

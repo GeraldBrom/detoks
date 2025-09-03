@@ -33,8 +33,6 @@
             gap: 20px;
         }
         
-
-        
         &__info {
             width: 488px;
             height: 144px;
@@ -163,6 +161,194 @@
                 height: 460px;
                 left: 0px;
                 top: 0px;
+            }
+        }
+    }
+    
+    &__mobile-section {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        padding: 80px 0;
+        
+        &__list {
+            display: block;
+            padding: 0 20px;
+        }
+        
+        &__card {
+            display: none;
+        }
+        
+        &__images {
+            display: none;
+        }
+        
+        &__mobile-section {
+            display: block !important;
+        }
+        
+        &__mobile-title {
+            font-size: 30px;
+            font-weight: 600;
+            color: #383838;
+            margin: 0 0 40px 0;
+            line-height: 36px;
+            text-align: left;
+        }
+        
+        &__mobile-slider {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 0 0 15px 0;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none; 
+            scroll-behavior: smooth;
+            cursor: grab;
+            user-select: none;
+            
+            &:active {
+                cursor: grabbing;
+            }
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            
+            &::before {
+                content: '';
+                flex: 0 0 10px;
+            }
+            
+            &::after {
+                content: '';
+                flex: 0 0 10px;
+            }
+        }
+        
+        &__mobile-card {
+            flex: 0 0 280px;
+            display: flex;
+            flex-direction: column;
+            scroll-snap-align: start;
+            
+            &__image-container {
+                width: 280px;
+                height: 320px;
+                background: white;
+                border-radius: 10px;
+                box-shadow: 0px 3px 15px rgba(180, 204, 221, 0.50);
+                overflow: hidden;
+                margin-bottom: 0;
+            }
+            
+            &__image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+                transition: transform 0.3s ease;
+                
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+            
+            &__info {
+                width: 280px;
+                height: 128px;
+                background: #F1F8FD;
+                border-radius: 10px;
+                padding: 15px 20px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            &__name {
+                color: #383838;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 26px;
+                margin: 0 0 10px 0;
+            }
+            
+            &__specialization,
+            &__experience {
+                margin: 0 0 5px 0;
+                display: flex;
+                flex-wrap: wrap;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            
+            &__label {
+                color: rgba(56, 56, 56, 0.6);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                margin-right: 4px;
+            }
+            
+            &__value {
+                color: #0DA3FF;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 20px;
+            }
+        }
+    }
+    
+    @media (max-width: 480px) {
+        padding: 60px 0;
+        
+        &__list {
+            padding: 0 15px;
+        }
+        
+        &__mobile-title {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 30px;
+        }
+        
+        &__mobile-slider {
+            gap: 10px;
+            
+            &::before {
+                flex: 0 0 5px;
+            }
+            
+            &::after {
+                flex: 0 0 5px;
+            }
+        }
+        
+        &__mobile-card {
+            flex: 0 0 260px;
+            
+            &__image-container {
+                width: 260px;
+                height: 300px;
+            }
+            
+            &__info {
+                width: 260px;
+                height: auto;
+                min-height: 128px;
+                padding: 20px;
+            }
+            
+            &__name {
+                font-size: 16px;
+                line-height: 24px;
             }
         }
     }

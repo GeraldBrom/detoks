@@ -86,3 +86,68 @@ $documents = [
             </div>
         </div>
 </section>
+
+<!-- JavaScript для drag and drop функционала -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Drag and drop для мобильных изображений
+        const mobileImages = document.querySelector('.about__mobile-images');
+        if (mobileImages) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            mobileImages.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - mobileImages.offsetLeft;
+                scrollLeft = mobileImages.scrollLeft;
+            });
+            
+            mobileImages.addEventListener('mouseleave', () => {
+                isDown = false;
+            });
+            
+            mobileImages.addEventListener('mouseup', () => {
+                isDown = false;
+            });
+            
+            mobileImages.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - mobileImages.offsetLeft;
+                const walk = x - startX;
+                mobileImages.scrollLeft = scrollLeft - walk;
+            });
+        }
+        
+        // Drag and drop для документов
+        const documentsItems = document.querySelector('.documents__items');
+        if (documentsItems) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            documentsItems.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - documentsItems.offsetLeft;
+                scrollLeft = documentsItems.scrollLeft;
+            });
+            
+            documentsItems.addEventListener('mouseleave', () => {
+                isDown = false;
+            });
+            
+            documentsItems.addEventListener('mouseup', () => {
+                isDown = false;
+            });
+            
+            documentsItems.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - documentsItems.offsetLeft;
+                const walk = x - startX;
+                documentsItems.scrollLeft = scrollLeft - walk;
+            });
+        }
+    });
+</script>
