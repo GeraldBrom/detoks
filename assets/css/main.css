@@ -395,7 +395,7 @@ body {
   color: rgba(56, 56, 56, 0.75);
 }
 .services__item__button {
-  width: 318px;
+  width: 320px;
   height: 55px;
   position: relative;
   border: 1px solid #0DA3FF;
@@ -668,6 +668,119 @@ body {
   height: 460px;
   left: 0px;
   top: 0px;
+}
+
+.advantages {
+  padding: 140px 0;
+  background-color: #F1F8FD;
+}
+.advantages__content {
+  display: flex;
+  margin-bottom: 60px;
+  gap: 60px;
+}
+.advantages__image {
+  width: 550px;
+  height: 660px;
+  flex-shrink: 0;
+}
+.advantages__image-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.advantages__text {
+  width: 590px;
+  height: 660px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.advantages__header {
+  margin-bottom: 25px;
+}
+.advantages__title {
+  font-size: 52px;
+  font-weight: 600;
+  color: #383838;
+  line-height: 55px;
+  margin: 0;
+}
+.advantages__description {
+  margin-bottom: 50px;
+}
+.advantages__description-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #383838;
+  line-height: 25px;
+  margin: 0;
+}
+.advantages__benefits {
+  flex: 1;
+}
+.advantages__benefits-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #383838;
+  line-height: 32px;
+  margin: 0 0 25px 0;
+}
+.advantages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.advantages__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.advantages__item::before {
+  content: "";
+  width: 2px;
+  background-color: #0DA3FF;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.advantages__item:nth-child(1)::before {
+  height: 48px;
+}
+.advantages__item:nth-child(2)::before, .advantages__item:nth-child(3)::before, .advantages__item:nth-child(4)::before {
+  height: 80px;
+}
+.advantages__item-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #383838;
+  line-height: 25px;
+  margin: 0;
+  flex: 1;
+}
+.advantages__form {
+  height: 295px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(92deg, #0095F1 0%, #0DA3FF 103.58%, #0DA3FF 103.58%);
+  position: relative;
+  overflow: hidden;
+}
+.advantages__form::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: 50%;
+  width: 4px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="295" viewBox="0 0 4 295" fill="none"><path d="M2 0L1.99999 295" stroke="white" stroke-opacity="0.25" stroke-width="4" stroke-dasharray="19 19"/></svg>');
+  background-repeat: repeat-y;
+  background-size: 4px auto;
+  transform: translateX(-50%);
 }
 
 .about {
