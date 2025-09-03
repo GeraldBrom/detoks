@@ -56,11 +56,11 @@ $documents = [
             <div class="about__image">
                 <div class="about__image-wrapper" data-about-slider>
                     <img src="assets/images/about/about.png" alt="О Клинике" data-about-image>
-                    <div class="about__image-controls">
-                        <button class="about__image-btn about__image-btn--prev" type="button" aria-label="Предыдущее изображение" data-about-prev>
+                    <div class="image-nav-controls">
+                        <button class="image-nav-btn image-nav-btn--prev" type="button" aria-label="Предыдущее изображение" data-about-prev>
                             <img src="assets/images/about/arrow-left.svg" alt="">
                         </button>
-                        <button class="about__image-btn about__image-btn--next" type="button" aria-label="Следующее изображение" data-about-next>
+                        <button class="image-nav-btn image-nav-btn--next" type="button" aria-label="Следующее изображение" data-about-next>
                             <img src="assets/images/about/arrow-right.svg" alt="">
                         </button>
                     </div>

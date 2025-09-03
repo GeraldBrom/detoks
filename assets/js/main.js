@@ -1,6 +1,8 @@
 import AboutSlider from './script/AbouteSlider.js';
+import DoctorsSlider from './script/DoctorsSlider.js';
 
-// Инициализация при загрузке DOM
+
 document.addEventListener('DOMContentLoaded', () => {
     new AboutSlider();
+    new DoctorsSlider();
 });

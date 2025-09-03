@@ -6,7 +6,7 @@
   "scripts": {
     "sass": "sass assets/scss/main.scss assets/css/main.css",
     "sass:watch": "sass --watch assets/scss/main.scss assets/css/main.css",
-    "dev": "concurrently \"npm run sass:watch\" \"browser-sync start --proxy=detoks.ld --files=assets/css/*.css,assets/js/*.js,components/*.php,src/**/*.php,index.php --no-open --reload-delay 300\"",
+    "dev": "concurrently \"npm run sass:watch\" \"browser-sync start --proxy=detoks --files=assets/css/*.css,assets/js/*.js,components/*.php,src/**/*.php,index.php --no-open --reload-delay 300\"",
     "dev:watch": "concurrently \"npm run sass:watch\" \"chokidar \\\"components/*.php\\\" \\\"src/**/*.php\\\" \\\"assets/js/*.js\\\" \\\"assets/css/*.css\\\" \\\"index.php\\\" -c \\\"browser-sync reload\\\"\"",
     "serve": "browser-sync start --proxy=detoks --files=assets/css/*.css,assets/js/*.js,components/*.php,src/**/*.php,index.php --no-open",
     "build": "sass assets/scss/main.scss assets/css/main.css --style compressed"
