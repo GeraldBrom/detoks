@@ -84,7 +84,7 @@ $feedbackData = [
         <div class="faq__feedback">
             <div class="faq__feedback-header">
                 <h3 class="faq__feedback-title">Отзывы пациентов</h3>
-                <div class="image-nav-controls image-nav-controls--inline">
+                <div class="image-nav-controls image-nav-controls--inline image-nav-controls--desktop">
                     <button class="image-nav-btn image-nav-btn--prev" type="button" aria-label="Предыдущий отзыв" data-feedback-prev>
                         <img src="assets/images/about/arrow-left.svg" alt="">
                     </button>
@@ -109,6 +109,16 @@ $feedbackData = [
                 <?php endforeach; ?>
                 </div>
             </div>
+        </div>
+        
+        <!-- Мобильные кнопки навигации -->
+        <div class="faq-mobile-nav">
+            <button class="faq-mobile-nav__btn faq-mobile-nav__btn--prev" type="button" aria-label="Предыдущий отзыв" data-feedback-prev>
+                <img src="assets/images/about/arrow-left.svg" alt="">
+            </button>
+            <button class="faq-mobile-nav__btn faq-mobile-nav__btn--next" type="button" aria-label="Следующий отзыв" data-feedback-next>
+                <img src="assets/images/about/arrow-right.svg" alt="">
+            </button>
         </div>
     </div>
 </section>
