@@ -1,5 +1,6 @@
 # Клиника плюс - Лендинг
-![Uploading image.png…]()
+<img width="1905" height="958" alt="image" src="https://github.com/user-attachments/assets/23154aa2-adf9-46e9-a739-cbdc8eb5529d" />
+
 
 Современный лендинг для медицинской клиники с адаптивным дизайном и формой записи на прием.
 
